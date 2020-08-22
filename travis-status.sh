@@ -27,7 +27,7 @@ function openFailures {
             BUILD_NUMBER=$(echo $BUILD | cut -d '#' -f2)
 
             travis open $BUILD_NUMBER --repo $REPO --$TRAVIS_DOMAIN & 
-            travis open $BUILD_NUMBER --repo $REPO --$TRAVIS_DOMAIN -g & 
+            #travis open $BUILD_NUMBER --repo $REPO --$TRAVIS_DOMAIN -g & 
 
         fi
     done
@@ -36,7 +36,7 @@ function openFailures {
 
 function openTravisDashboards {
     open https://travis-ci.com/github/$1
-    open https://travis-ci.com/github/$1
+    open https://travis-ci.org/github/$1
 }
 
 
